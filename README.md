@@ -128,10 +128,8 @@ Key findings from `notebooks/eda_house_prices.ipynb`:
 
 - `SalePrice` is right-skewed → log transformation is useful
 - Many NaN values are meaningful, not random missing data
-- `OverallQual`, `GrLivArea`, and `GarageCars` are the top 3 predictors
 - Neighborhood creates strong price tiers — up to 3× price difference between areas
-- Remodeled houses command a significant median price premium
-- Age-related features (`AgeOfHouse`, `TimeSinceRemodel`) provide useful signal beyond raw year columns
+
 
 ---
 
