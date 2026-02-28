@@ -1,0 +1,357 @@
+ORDINAL_COLS_ENCODED:
+  - OverallQual
+  - OverallCond
+
+ORDINAL_COLS:
+  - ExterQual
+  - ExterCond
+  - BsmtQual
+  - BsmtCond
+  - BsmtExposure
+  - BsmtFinType1
+  - BsmtFinType2
+  - HeatingQC
+  - KitchenQual
+  - FireplaceQu
+  - GarageQual
+  - GarageCond
+  - PoolQC
+  - Fence
+  - LotShape
+  - LandSlope
+  - Functional
+  - CentralAir
+  - Utilities
+  - LandContour
+
+NOMINAL_COLS:
+  - PavedDrive
+  - Exterior1st
+  - Electrical
+  - Street
+  - MiscFeature
+  - Condition1
+  - BldgType
+  - Heating
+  - MSZoning
+  - LotConfig
+  - Neighborhood
+  - RoofMatl
+  - Exterior2nd
+  - Foundation
+  - Alley
+  - Condition2
+  - GarageType
+  - SaleCondition
+  - RoofStyle
+  - MasVnrType
+  - SaleType
+  - HouseStyle
+  - GarageFinish
+
+CATEGORICAL_COLS:
+  # Combinaison de NOMINAL + ORDINAL + ORDINAL_ENCODED
+  - PavedDrive
+  - Exterior1st
+  - Electrical
+  - Street
+  - MiscFeature
+  - Condition1
+  - BldgType
+  - Heating
+  - MSZoning
+  - LotConfig
+  - Neighborhood
+  - RoofMatl
+  - Exterior2nd
+  - Foundation
+  - Alley
+  - Condition2
+  - GarageType
+  - SaleCondition
+  - RoofStyle
+  - MasVnrType
+  - SaleType
+  - HouseStyle
+  - GarageFinish
+  - ExterQual
+  - ExterCond
+  - BsmtQual
+  - BsmtCond
+  - BsmtExposure
+  - BsmtFinType1
+  - BsmtFinType2
+  - HeatingQC
+  - KitchenQual
+  - FireplaceQu
+  - GarageQual
+  - GarageCond
+  - PoolQC
+  - Fence
+  - LotShape
+  - LandSlope
+  - Functional
+  - CentralAir
+  - Utilities
+  - LandContour
+  - OverallQual
+  - OverallCond
+
+NUMERICAL_COLS:
+  - MSSubClass
+  - LotFrontage
+  - LotArea
+  - YearBuilt
+  - YearRemodAdd
+  - MasVnrArea
+  - BsmtFinSF1
+  - BsmtFinSF2
+  - BsmtUnfSF
+  - TotalBsmtSF
+  - 1stFlrSF
+  - 2ndFlrSF
+  - LowQualFinSF
+  - GrLivArea
+  - BsmtFullBath
+  - BsmtHalfBath
+  - FullBath
+  - HalfBath
+  - BedroomAbvGr
+  - KitchenAbvGr
+  - TotRmsAbvGrd
+  - Fireplaces
+  - GarageYrBlt
+  - GarageCars
+  - GarageArea
+  - WoodDeckSF
+  - OpenPorchSF
+  - EnclosedPorch
+  - 3SsnPorch
+  - ScreenPorch
+  - PoolArea
+  - MiscVal
+  - MoSold
+  - YrSold
+
+NEW_FEATURES:
+  - TotalOrdinalScore
+  - TotalArea
+  - TotalPorch
+  - TotalSF
+  - TotalBathrooms
+  - BedPerBath
+
+KNOWN_NAN_COLS:
+  Alley: NoAlley
+  BsmtQual: NoBsmt
+  BsmtCond: NoBsmt
+  BsmtExposure: NoBsmt
+  BsmtFinType1: NoBsmt
+  BsmtFinType2: NoBsmt
+  FireplaceQu: NoFire
+  GarageType: NoGarage
+  GarageFinish: NoGarage
+  GarageQual: NoGarage
+  GarageCond: NoGarage
+  PoolQC: NoPool
+  Fence: NoFence
+  MiscFeature: NoMisc
+  # MasVnrType: Nan -> None
+
+QUALITY_COLS:
+  - ExterQual
+  - ExterCond
+  - BsmtQual
+  - BsmtCond
+  - HeatingQC
+  - KitchenQual
+  - FireplaceQu
+  - GarageQual
+  - GarageCond
+  - PoolQC
+
+AREA_COLS:
+  - LotArea
+  - MasVnrArea
+  - TotalBsmtSF
+  - GrLivArea
+  - GarageArea
+  - PoolArea
+  - WoodDeckSF
+  - OpenPorchSF
+
+TOTAL_PORCH:
+  - OpenPorchSF
+  - EnclosedPorch
+  - 3SsnPorch
+  - ScreenPorch
+
+TOTAL_SF:
+  - GrLivArea
+  - TotalBsmtSF
+
+LOG_FEATURES:
+  - GrLivArea
+  - TotalSF
+
+FEATURES_TO_SUM:
+  TotalOrdinalScore:
+    - ExterQual
+    - ExterCond
+    - BsmtQual
+    - BsmtCond
+    - BsmtExposure
+    - BsmtFinType1
+    - BsmtFinType2
+    - HeatingQC
+    - KitchenQual
+    - FireplaceQu
+    - GarageQual
+    - GarageCond
+    - PoolQC
+    - Fence
+    - LotShape
+    - LandSlope
+    - Functional
+    - CentralAir
+    - Utilities
+    - LandContour
+    - OverallQual
+    - OverallCond
+  TotalArea:
+    - LotArea
+    - MasVnrArea
+    - TotalBsmtSF
+    - GrLivArea
+    - GarageArea
+    - PoolArea
+    - WoodDeckSF
+    - OpenPorchSF
+  TotalPorch:
+    - OpenPorchSF
+    - EnclosedPorch
+    - 3SsnPorch
+    - ScreenPorch
+  TotalSF:
+    - GrLivArea
+    - TotalBsmtSF
+
+ORDINAL_COLS_RANK:
+  ExterQual:
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  ExterCond:
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  BsmtQual:
+    - "NoBsmt"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  BsmtCond:
+    - "NoBsmt"
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  BsmtExposure:
+    - "NoBsmt"
+    - "No"
+    - "Mn"
+    - "Av"
+    - "Gd"
+  BsmtFinType1:
+    - "NoBsmt"
+    - "Unf"
+    - "LwQ"
+    - "Rec"
+    - "BLQ"
+    - "ALQ"
+    - "GLQ"
+  BsmtFinType2:
+    - "NoBsmt"
+    - "Unf"
+    - "LwQ"
+    - "Rec"
+    - "BLQ"
+    - "ALQ"
+    - "GLQ"
+  HeatingQC:
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  KitchenQual:
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  FireplaceQu:
+    - "NoFireplace"
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  GarageQual:
+    - "NoGarage"
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  GarageCond:
+    - "NoGarage"
+    - "Po"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  PoolQC:
+    - "NoPool"
+    - "Fa"
+    - "TA"
+    - "Gd"
+    - "Ex"
+  Fence:
+    - "NoFence"
+    - "MnWw"
+    - "GdWo"
+    - "GdPrv"
+  LotShape:
+    - "IR3"
+    - "IR2"
+    - "IR1"
+    - "Reg"
+  LandSlope:
+    - "Sev"
+    - "Mod"
+    - "Gtl"
+  Functional:
+    - "Sev"
+    - "Maj2"
+    - "Maj1"
+    - "Mod"
+    - "Min2"
+    - "Min1"
+    - "Typ"
+  CentralAir:
+    - "N"
+    - "Y"
+  Utilities:
+    - "NoSeWa"
+    - "AllPub"
+  LandContour:
+    - "Low"
+    - "Bnk"
+    - "HLS"
+    - "Lvl"
+
