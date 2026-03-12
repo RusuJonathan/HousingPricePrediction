@@ -1,13 +1,11 @@
-# 🏠 House Prices — Advanced Regression Techniques
+# House Prices — Advanced Regression Techniques
 
-[![Python](https://img.shields.io/badge/Python-3.12-green?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Stacking ensemble with Optuna hyperparameter optimization achieving a **top ~4% ranking** on the Kaggle leaderboard.
 
 ---
 
-## 📊 Results
+## Results
 
 | Metric | Score |
 |---|---|
@@ -17,7 +15,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 house-prices/
@@ -47,7 +45,7 @@ house-prices/
 
 ---
 
-## 🧠 Approach
+## Approach
 
 ### Preprocessing pipeline
 
@@ -102,7 +100,7 @@ All hyperparameters are tuned with **Optuna** using:
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 Dependencies are managed with **Poetry** (`pyproject.toml`). Main packages:
 
@@ -122,7 +120,7 @@ scipy
 
 ---
 
-## 📓 EDA Highlights
+## EDA Highlights
 
 Key findings from `notebooks/eda_house_prices.ipynb`:
 
@@ -131,8 +129,3 @@ Key findings from `notebooks/eda_house_prices.ipynb`:
 - Neighborhood creates strong price tiers — up to 3× price difference between areas
 
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
